@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Confirmation</title>
+    <style>
+        body {
+            width: 100vw;
+            margin: auto;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        a {
+            color: #038203;
+        }
+
+        div.border-outline {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            padding: 40px 0;
+        }
+
+        h1 {
+            color: #1a5336;
+            font: 26px "TD Graphik Medium,Helvetica-,droid sans,sans-serif";
+            margin-bottom: 20px;
+            align-self: center;
+            font-weight: bold;
+        }
+
+        div.subHeader {
+            color: #1C1C1C;
+            font: 15px "TD Graphik Semilight,Helvetica-,droid sans,sans-serif";
+            align-self: center;
+            margin: 0 15px 22.5px;
+        }
+
+        div.product-status-row {
+            display: flex;
+            flex-direction: column;
+            margin: 0 30px 0;
+        }
+
+        div.product {
+            color: #1C1C1C;
+        }
+
+        span.product-name {
+            font: 18px "TD Graphik Medium,Helvetica-,droid sans,sans-serif";
+            font-weight: bold;
+        }
+
+        span.account-number {
+            font: 15px "TD Graphik Semilight,Helvetica-,droid sans,sans-serif";
+        }
+
+        div.status {
+            font: 15px "TD Graphik SemiLight Italic,Helvetica-,droid sans,sans-serif";
+        }
+
+        div.grey-background {
+            background-color: #f9f9f9;
+            margin: 0 30px 0;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        hr.dot-divider {
+            margin-top: 0;
+            margin-bottom: 24px;
+            border: 1px dashed #cccccc;
+        }
+
+        div.store-info-data {
+            font-weight: bold !important;
+            margin-bottom: 20px;
+            line-height: 5 !important;
+        }
+
+        div.store-info-data-address {
+            font-weight: bold !important;
+            margin-bottom: 20px;
+            line-height: 0.9 !important;
+        }
+
+        div.business-details-heading {
+            font: 15px "TD Graphik Semilight";
+            color: #1c1c1c;
+        }
+
+        .business-details-data {
+            font: 15px "TD Graphik Medium";
+            color: #1c1c1c;
+            font-weight: bold;
+        }
+
+        .business-details-data-normal {
+            font-weight: normal;
+        }
+
+        ul.business-details-data {
+            margin-top: 0;
+            padding-left: 17px;
+            font-weight: bold;
+        }
+
+        ul li::before {
+            content: "\2022";
+            color: #038203;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        div.whatsNextRows {
+            display: flex;
+            flex-direction: column;
+            column-gap: 36px;
+            row-gap: 27.41px;
+            /*justify-content: center;*/
+            /*align-items: center;*/
+            place-content: center;
+            font: 15px "TD Graphik Semilight";
+        }
+
+        hr.solid-divider {
+            margin: 0 30px 0;
+            border: 1px solid #cccccc;
+            height: 1px;
+        }
+
+        div.whatHappensNow {
+            display: flex;
+            flex-direction: column;
+            margin: 14px 30px 0;
+        }
+
+        h2.whatHappensNow {
+            font: 22px "TD Graphik Medium";
+            letter-spacing: -0.22px;
+            color: #1a5336;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        div.whatHappensNowCenter {
+            text-align: center;
+        }
+
+        hr.thick-divider-div {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        hr.thick-divider {
+            border-top: 10px solid #F3F3F3;
+        }
+
+        hr.divider-margin {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        div.whatsNext {
+            display: flex;
+            flex-direction: column;
+            margin: 14px 30px 0;
+        }
+
+        h2.whatsNext {
+            font: 22px "TD Graphik Medium";
+            letter-spacing: -0.22px;
+            color: #1a5336;
+            text-align: center;
+        }
+
+        span.whatsNextBold {
+            font: 15px "TD Graphik Medium";
+            font-weight: bold;
+        }
+
+        div.whatsNextCenter {
+            place-self: center;
+        }
+
+        div.grey-divider {
+            margin-top: 40px;
+            background: #F3F3F3 0% 0% no-repeat padding-box;
+            height: 10px;
+            width: 100%;
+            padding: 0 -30px;
+        }
+
+        div.bankAnywhereAnytime {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        h2.bankAnywhereAnytime {
+            margin-top: 0;
+            font-weight: bold;
+        }
+
+        h2 {
+            color: #1a5336;
+            font: 22px "TD Graphik Medium,Helvetica-,droid sans,sans-serif";
+            margin-bottom: 20px;
+            align-self: center;
+        }
+
+        h2.smallBusinessSolutions {
+            margin-top: 0;
+            font-weight: bold;
+        }
+
+        div.bankAnywhereAnytimeSub {
+            display: flex;
+            flex-direction: column;
+            place-items: center;
+            margin: 0 30px;
+            text-align: center;
+        }
+
+        a.title {
+            color: #038203;
+            font: 18px "TD Graphik Medium";
+            font-weight: bold;
+            line-height: 1 !important;
+        }
+
+        div.smallBusinessSolutions {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        div.smallBusinessSolutionsSub {
+            display: flex;
+            flex-direction: column;
+            place-items: center;
+            margin: 0 30px;
+            text-align: center;
+        }
+
+        .smallBusinessSolutionsSubLink {
+
+        }
+
+        .smallBusinessSolutionsSubText {
+
+        }
+
+        div.deposit-confirmation {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media screen and (max-width: 600px) {
+            div.store-info-frozen {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .business-details-data {
+                margin-bottom: 20px;
+            }
+
+            .business-details-data:last-child {
+                margin-bottom: 0;
+            }
+
+            h2.whatsNext {
+                margin-bottom: 30px;
+            }
+
+            div.whatsNextText {
+                text-align: center;
+            }
+
+            .bankAnywhereAnytimeSubLink {
+                margin-bottom: 20px;
+            }
+
+            .bankAnywhereAnytimeSubText {
+                margin-bottom: 30px;
+            }
+
+            .bankAnywhereAnytimeSubText:last-child {
+                margin-bottom: 0;
+            }
+
+            .smallBusinessSolutionsSubLink {
+                margin-bottom: 20px;
+            }
+
+            .smallBusinessSolutionsSubText {
+                margin-bottom: 30px;
+            }
+
+            .smallBusinessSolutionsSubText:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @media screen and (min-width: 601px) {
+            body {
+                max-width: 770px;
+                margin: auto;
+                border: 1px #ffffff;
+            }
+
+            div.border-outline {
+                border: 1px solid #CCCCCC;
+            }
+
+            div.product-status-row {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            div.store-info-frozen {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: [heading] 20px [data] 38px [storeInfoRowEnd];
+                column-gap: 40px;
+                row-gap: 0;
+                color: #1C1C1C;
+                grid-auto-flow: column;
+            }
+
+            div.store-info-active {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: [heading] 20px [data] 38px [storeInfoRowEnd];
+                column-gap: 40px;
+                row-gap: 0;
+                color: #1C1C1C;
+                grid-auto-flow: column;
+            }
+
+            div.store-info-heading {
+                font: 15px "TD Graphik SemiLight,Helvetica-,droid sans,sans-serif";
+                line-height: 23px;
+                font-variant-ligatures: no-contextual;
+            }
+
+            div.store-info-data {
+                font: 15px "TD Graphik Medium";
+            }
+
+            hr.dot-divider {
+                margin-top: 25px;
+            }
+
+            div.business-details {
+                display: grid;
+                grid-template-columns: [businessDetailsHeading] 50% [businessDetailsData] 50% [businessDetailsEnd];
+                row-gap: 20px;
+            }
+
+            ul.business-details-data {
+                margin-bottom: 0;
+            }
+
+            div.whatsNextRows {
+                display: grid;
+                grid-template-columns: [startIcon] 55px [endIcon startText] auto [endText];
+                column-gap: 36px;
+                row-gap: 27.41px;
+                align-items: center;
+                font: 15px "TD Graphik Semilight";
+            }
+
+            div.bankAnywhereAnytimeSub {
+                display: grid;
+                grid-template-rows: 30px auto;
+                grid-template-columns: repeat(3, 1fr);
+                grid-auto-flow: column;
+                align-items: flex-start;
+                row-gap: 10px;
+                column-gap: 20px;
+            }
+
+            div.smallBusinessSolutionsSub {
+                display: grid;
+                grid-template-rows: 30px auto;
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-flow: column;
+                align-items: flex-start;
+                row-gap: 10px;
+                column-gap: 20px;
+                /*text-align: center;*/
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="border-outline">
+    
+    <h1>We're reviewing your application</h1>
+
+    
+    <div class="subHeader">Your reference number is <b>[4293739439]</b>. </div>
+
+    <div class="product-status-row">
+        <div class="product">
+            <span class="product-name">TD Business Simple Checking</span>
+            
+        </div>
+        <div class="status">
+            <span class="status-icon">
+                
+                <svg width="20px" height="16px"
+                     translate-attr="{alt: 'bc.whatHappensNow.title.icon.alt'}"
+                     class="ng-scope" alt="Notice"
+                ><svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16">
+  <g id="WORKING_COPY" data-name="WORKING COPY" transform="translate(0 0)">
+    <path id="Path_3970" data-name="Path 3970" d="M46.321,25.54,37.09,40.2H55.623Z" transform="translate(-36.356 -25.067)" fill="#1a5336"/>
+    <path id="Path_3971" data-name="Path 3971" d="M55.082,40.727H36.574l-.747-1.387,9.219-14.611,1.492,0,9.29,14.611ZM38.2,38.925H53.453L45.8,26.881Z" transform="translate(-35.827 -24.727)" fill="#1a5336"/>
+    <path id="Path_3972" data-name="Path 3972" d="M51.111,39.7h1.715v1.677H51.111Zm.013-7.337h1.7l-.24,6.3H51.363Z" transform="translate(-42.059 -27.416)" fill="#fff"/>
+  </g>
+</svg>
+</svg>
+            </span>
+            <span class="status-text">Under review</span>
+        </div>
+    </div>
+
+    <div class="grey-background">
+        <div class="store-info-frozen">
+            <div class="store-info-heading store-number-heading">Store number</div>
+            <div class="store-info-data store-number-data">4080</div>
+            
+            
+            <div class="store-info-heading store-address-heading">Store address</div>
+            <div class="store-info-data-address store-address-data">111 Mineola Avenue, Roslyn Heights, NY, 11577</div>
+            <div class="store-info-heading store-phone-number-heading">Store phone number</div>
+            <div class="store-info-data store-phone-number-data">516 484-0167</div>
+        </div>
+
+        <div>
+            <hr class="dot-divider"/>
+        </div>
+
+        <div class="business-details">
+            <div class="business-details-heading">Legal business name</div>
+            <div class="business-details-data">Definitely Green Holdings</div>
+
+            
+            
+
+            <div class="business-details-heading">Signer(s)</div>
+            <div class="business-details-data">PAUL M CERQUEIRA</div>
+            
+            
+
+            
+            
+            
+            
+
+            <div class="business-details-heading">Control person</div>
+            <div class="business-details-data">PAUL M CERQUEIRA</div>
+            
+            
+
+            
+            
+        </div>
+    </div>
+
+    <div>
+        <hr class="solid-divider"/>
+    </div>
+
+    <div class="whatHappensNow">
+        <h2 class="whatHappensNow">
+            <svg width="38px" height="15px"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16">
+  <g id="WORKING_COPY" data-name="WORKING COPY" transform="translate(0 0)">
+    <path id="Path_3970" data-name="Path 3970" d="M46.321,25.54,37.09,40.2H55.623Z" transform="translate(-36.356 -25.067)" fill="#1a5336"/>
+    <path id="Path_3971" data-name="Path 3971" d="M55.082,40.727H36.574l-.747-1.387,9.219-14.611,1.492,0,9.29,14.611ZM38.2,38.925H53.453L45.8,26.881Z" transform="translate(-35.827 -24.727)" fill="#1a5336"/>
+    <path id="Path_3972" data-name="Path 3972" d="M51.111,39.7h1.715v1.677H51.111Zm.013-7.337h1.7l-.24,6.3H51.363Z" transform="translate(-42.059 -27.416)" fill="#fff"/>
+  </g>
+</svg>
+</svg> What happens now?
+        </h2>
+        <div class="whatHappensNowCenter">We may need to contact you to verify the information you've shared. Once completed, we'll open your account and notify you via e-mail within <span class='bold'>1-2 business days.</span></div>
+    </div>
+
+<!--    <hr class="divider-margin thick-divider thick-divider-div"/>-->
+
+    
+
+    <div class="grey-divider"></div>
+
+    <div class="bankAnywhereAnytime">
+        <h2 class="bankAnywhereAnytime">Bank anywhere, anytime</h2>
+        <div class="subHeader">Manage your finances when and where you want.</div>
+        <div class="bankAnywhereAnytimeSub">
+            <div class="bankAnywhereAnytimeSubLink"><a href="https://www.td.com/us/en/personal-banking/mobile-app/" class="title">TD Mobile Banking App ></a></div>
+            <div class="bankAnywhereAnytimeSubText">Manage all your TD Bank small business accounts on the go, plus deposit checks, pay bills, transfer money and more.</div>
+            <div class="bankAnywhereAnytimeSubLink"><a href="https://www.td.com/us/en/small-business/online-banking/" class="title">Online Banking ></a></div>
+            <div class="bankAnywhereAnytimeSubText">Easily manage your small business accounts and save time with Online Banking.</div>
+            <div class="bankAnywhereAnytimeSubLink"><a href="https://www.td.com/us/en/personal-banking/store-locator/#/" class="title">Find a TD Bank near you ></a></div>
+            <div class="bankAnywhereAnytimeSubText">You can bank with us at nearly 1,300 locations along the east coast.</div>
+        </div>
+    </div>
+
+    <div>
+        <hr class="solid-divider"/>
+    </div>
+
+    <div class="smallBusinessSolutions">
+        <h2 class="smallBusinessSolutions">Small business solutions</h2>
+        <div class="subHeader">Explore small business banking <a href="https://www.td.com/us/en/small-business/">products and services.</a></div>
+        <div class="smallBusinessSolutionsSub">
+            <div class="smallBusinessSolutionsSubLink"><a class="title" href="https://www.td.com/us/en/personal-banking/credit-cards/business-solutions-credit-card/">TD Business Solutions Credit Card ></a></div>
+            <div class="smallBusinessSolutionsSubText">Earn unlimited Cash Back. No caps, limits or rotating categories.</div>
+            <div class="smallBusinessSolutionsSubLink"><a class="title" href="https://www.tdbank.com/small_business/merchant_solutions.html">TD Merchant Solutions ></a></div>
+            <div class="smallBusinessSolutionsSubText">Providing credit and debit card processing with the availability of next business day funding to TD Bank checking accounts.</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
